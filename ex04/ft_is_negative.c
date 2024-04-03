@@ -14,7 +14,7 @@ void ft_is_negative(int n) {
 }
 
 int main() {
-    int number = 100;
+    int number = -8;
     ft_is_negative(number);
     return 0;
-}
+} 

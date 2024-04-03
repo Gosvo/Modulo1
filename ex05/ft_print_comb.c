@@ -1,12 +1,27 @@
-#include <stdio.h>
+#include <unistd.h>
 
 void display_combinations() {
-    for (int i = 0; i <= 7; i++) {
-        for (int j = i + 1; j <= 8; j++) {
-            for (int k = j + 1; k <= 9; k++) {
-                printf("%d%d%d\n", i, j, k);
+    
+int i = '0';
+int j;
+int k;
+
+    while (i <= '7' ) {
+        j = i + 1;
+        while (j <= '8') {
+            k = j + 1;
+            while (k <= '9') {
+                write (1, &i, 1);
+                write (1, &j, 1);
+                write (1, &k, 1);
+                write (1, ", ",2);
+                k++;
             }
-        }
+            j++;
+        } 
+        i++;
+
+    
     }
 }
 
